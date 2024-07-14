@@ -1,6 +1,13 @@
 function isPalindrome(word) {
   // Write your algorithm here
 }
+function isPalindrome(str) {
+  // Remove non-alphanumeric characters and convert to lowercase
+  const cleanedStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+  
+  // Compare the cleaned string to its reversed version
+  return cleanedStr === cleanedStr.split('').reverse().join('');
+}
 
 /* 
   Add your pseudocode here
